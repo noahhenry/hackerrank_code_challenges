@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    /* #placeHolder {
+      background-color: aquamarine;
+    } */
+  </style>
+</head>
+
+<body>
+  <div id="placeHolder"></div>
+</body>
+
+<script>
+  for (let i = 1; i <= 20; i++) {
+    // make the button
+    var buttonNode = document.createElement("button")
+    buttonNode.id = `${i}`
+    buttonNode.onclick = buttonClicked
+    var textNode = document.createTextNode(`Button ${i}`)
+    buttonNode.appendChild(textNode)
+
+    // put the button in the DOM
+    document.getElementById("placeHolder").appendChild(buttonNode)
+  }
+
+  function buttonClicked(button) {
+    console.log("Button Clicked")
+    let buttonIndex = button.toElement.id
+    alert(`Button Index == ${buttonIndex}`)
+  }
+</script>
