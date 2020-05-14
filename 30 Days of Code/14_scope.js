@@ -20,8 +20,7 @@ class Difference {
       
       for (let j = i + 1; j < this.elements.length; j++) {
         let comparer = this.elements[j]
-        let getDiff = function(a, b) { return Math.abs(a - b) }
-        let diff = getDiff(base, comparer)
+        let diff = Math.abs(base - comparer)
 
         if (diff > this.maximumDifference) {
           this.maximumDifference = diff
