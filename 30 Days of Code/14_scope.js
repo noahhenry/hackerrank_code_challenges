@@ -19,9 +19,9 @@ class Difference {
       let base = this.elements[i]
       
       for (let j = i + 1; j < this.elements.length; j++) {
-        let comparar = this.elements[j]
+        let comparer = this.elements[j]
         let getDiff = function(a, b) { return Math.abs(a - b) }
-        let diff = getDiff(base, comparar)
+        let diff = getDiff(base, comparer)
 
         if (diff > this.maximumDifference) {
           this.maximumDifference = diff
@@ -42,3 +42,4 @@ function solution(arr) {
 }
 solution([1,2,5])
 solution([4,6,12])
+solution([8,19,3,2,7])
