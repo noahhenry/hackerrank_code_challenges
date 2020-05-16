@@ -9,6 +9,7 @@
 class AdvancedArithmetic(object):
   def divisorSum(self, n): # added 'self' to appease linter
     raise NotImplementedError
+# END LOCK
 
 # Interfaced class
 class Calculator(AdvancedArithmetic):
@@ -26,3 +27,4 @@ my_calculator = Calculator()
 s = my_calculator.divisorSum(n)
 print("I implemented: " + type(my_calculator).__bases__[0].__name__)
 print(s)
+# END LOCK
